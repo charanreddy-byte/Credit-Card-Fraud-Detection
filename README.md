@@ -4,7 +4,7 @@ An end-to-end credit-card fraud detection project comparing **LightGBM** and a *
 
 The project covers exploratory data analysis, robust scaling, stratified validation, SMOTE-based imbalance handling, Optuna hyperparameter tuning, model evaluation, and SHAP explainability.
 
-> **Project note:** The notebook and academic report intentionally document methodological limitations, including fitting the scaler before the train/test split and using the hold-out test set for LightGBM early stopping. The reported hold-out metrics should therefore be interpreted with that limitation in mind.
+
 
 ## Results at a glance
 
