@@ -189,31 +189,6 @@ and open the notebook with Jupyter.
 
 ## Important methodological limitations
 
-The academic report identifies several limitations:
 
-1. **Test-set early stopping:** the final LightGBM model uses the hold-out test set for early stopping, making the reported hold-out metrics slightly optimistic.
-2. **Scaler leakage:** `RobustScaler` is fitted before the train/test split; strictly, it should be fitted on training data only.
-3. **Few fraud cases:** only 98 fraud cases are present in the hold-out set, so individual errors have a noticeable effect on recall.
-4. **Random split:** real fraud detection is temporal, so a chronological split would provide a more realistic estimate.
-5. **Fixed threshold:** both models are evaluated at 0.5; threshold optimisation was not performed.
-6. **Single dataset:** the source data covers two days of European transactions and may not generalise to other periods or regions.
-7. **Anonymised features:** business interpretation of `V1`–`V28` is limited.
-
-## Recommended future work
-
-- Fit preprocessing only on the training data.
-- Create a separate validation set for LightGBM early stopping.
-- Evaluate with chronological train/validation/test splits.
-- Select decision thresholds using an explicit fraud-vs-review cost matrix.
-- Re-test FraudNet at a tuned threshold.
-- Investigate model stacking/ensembling.
-- Add drift monitoring such as Population Stability Index.
-- Validate on a dataset containing real categorical and identity features, such as IEEE-CIS Fraud Detection.
-
-## Author
-
-**Charan Reddy**  
-MBA — Data Science & Data Analytics  
-Symbiosis Centre for Information Technology (SCIT), Pune
 
 Academic report date: **20 September 2026**
