@@ -187,8 +187,4 @@ pip install -r requirements.txt
 
 and open the notebook with Jupyter.
 
-## Important methodological limitations
 
-
-
-Academic report date: **20 September 2026**
